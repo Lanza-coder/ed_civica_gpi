@@ -1,0 +1,333 @@
+{
+  "project": {
+    "title": "Terremoto Turchia-Siria 2023",
+    "subtitle": "Analisi dell'impatto umanitario e ambientale attraverso il monitoraggio satellitare",
+    "date": "2023-02-06",
+    "authors": ["Barile", "Lanza", "Groppo"],
+    "subject": "Educazione Civica",
+    "schoolYear": "2025/2026",
+    "createdDate": "2023-05-01"
+  },
+  "event": {
+    "name": "Terremoto Turchia-Siria",
+    "date": "2023-02-06",
+    "time": "04:17",
+    "timezone": "Local",
+    "magnitude": {
+      "mainShock": 7.8,
+      "secondaryShock": 7.5,
+      "secondaryTime": "13:24",
+      "unit": "Mw"
+    },
+    "epicenter": {
+      "city": "Kahramanmaraş",
+      "region": "Turchia meridionale",
+      "coordinates": {
+        "latitude": 37.17,
+        "longitude": 37.87
+      }
+    },
+    "depth": {
+      "value": 17.9,
+      "unit": "km",
+      "type": "superficiale"
+    },
+    "affectedCountries": ["Turchia", "Siria"],
+    "affectedProvinces": 11
+  },
+  "tectonics": {
+    "fault": {
+      "name": "Faglia Anatolica Orientale",
+      "shortName": "EAF",
+      "type": "destrorso (strike-slip)",
+      "ruptureSurface": "oltre 300 km"
+    },
+    "plates": [
+      {
+        "name": "Placca Anatolica",
+        "interaction": "confine principale"
+      },
+      {
+        "name": "Placca Arabica",
+        "interaction": "convergenza"
+      },
+      {
+        "name": "Placca Africana",
+        "interaction": "convergenza"
+      },
+      {
+        "name": "Placca Eurasiatica",
+        "interaction": "convergenza"
+      }
+    ],
+    "seismicity": {
+      "countryAffected": "Turchia",
+      "averageEarthquakesMonth": 3,
+      "minimumMagnitude": 5.0
+    }
+  },
+  "satellite": {
+    "program": "Copernicus",
+    "organization": "European Commission",
+    "sensors": [
+      {
+        "name": "Sentinel-1",
+        "type": "Radar SAR",
+        "band": "C-band",
+        "capabilities": [
+          "Acquisizione dati in qualsiasi condizione atmosferica",
+          "Tecnica InSAR per misurare spostamenti del suolo",
+          "Misurazione deformazioni fino a 8 m",
+          "Identificazione crolli e variazioni edifici"
+        ],
+        "maxDeformation": 8,
+        "deformationUnit": "m",
+        "deformationArea": "Kahramanmaraş"
+      },
+      {
+        "name": "Sentinel-2",
+        "type": "Ottico multispettrale",
+        "resolution": 10,
+        "resolutionUnit": "m/pixel",
+        "bands": 13,
+        "capabilities": [
+          "Immagini ad alta risoluzione",
+          "Confronto pre/post-evento",
+          "Analisi NDBI per edifici distrutti",
+          "Monitoraggio incendi secondari"
+        ]
+      }
+    ],
+    "emergencyManagement": {
+      "service": "Copernicus EMS",
+      "activation": {
+        "hours": 2,
+        "mode": "Rapid Mapping"
+      },
+      "output": {
+        "mapsGenerated": 200,
+        "generationPeriod": "72 ore"
+      }
+    }
+  },
+  "damage": {
+    "statistics": {
+      "deaths": {
+        "value": 59259,
+        "countries": "Turchia + Siria"
+      },
+      "injured": {
+        "value": 125000,
+        "sourceAbbr": "OMS / OCHA"
+      },
+      "displaced": {
+        "value": 3000000,
+        "unit": "persone",
+        "need": "alloggio urgente"
+      },
+      "buildingsDestroyed": {
+        "value": 170000,
+        "source": "Copernicus EMS"
+      }
+    },
+    "notes": [
+      "Dati vittime siriane sottostimati per conflitto in corso e accesso limitato",
+      "Provincia di Hatay: la più colpita",
+      "50% degli edifici crollati privi di standard antisismici adeguati",
+      "Fonte: INGV, OCHA, Copernicus EMS (febbraio-aprile 2023)"
+    ],
+    "mostAffectedArea": {
+      "province": "Hatay",
+      "damage": "distruzione interi quartieri storici"
+    },
+    "buildingCodeCompliance": {
+      "nonCompliant": 50,
+      "unit": "%",
+      "standardYear": 1999
+    }
+  },
+  "response": {
+    "turkey": {
+      "country": "Turchia",
+      "status": "Risposta Nazionale Forte",
+      "actions": [
+        {
+          "actor": "AFAD",
+          "action": "Coordinamento soccorsi",
+          "responders": 80000,
+          "period": "prime 48 ore"
+        },
+        {
+          "actor": "Nazioni Internazionali",
+          "action": "Squadre USAR",
+          "count": 91
+        },
+        {
+          "actor": "Governo Turco",
+          "action": "Dichiarazione stato emergenza",
+          "provinces": 10,
+          "duration": "3 mesi"
+        },
+        {
+          "actor": "Unione Europea",
+          "action": "Attivazione ERCC",
+          "fullName": "Meccanismo Europeo di Protezione Civile"
+        },
+        {
+          "actor": "Comunità internazionale",
+          "action": "Raccolta fondi",
+          "amount": 6000000000,
+          "currency": "USD",
+          "period": "30 giorni"
+        },
+        {
+          "actor": "Governo Turco",
+          "action": "Costruzione container-city",
+          "capacity": 500000,
+          "displaced": "sfollati",
+          "deadline": "aprile 2023"
+        }
+      ]
+    },
+    "syria": {
+      "country": "Siria",
+      "status": "Crisi nella Crisi",
+      "challenges": [
+        {
+          "issue": "Conflitto in corso",
+          "since": 2011,
+          "impact": "Infrastrutture gravemente compromesse"
+        },
+        {
+          "issue": "Sanzioni internazionali",
+          "impact": "Ritardo ingresso aiuti"
+        },
+        {
+          "issue": "Valichi aperti ONU",
+          "count": 3,
+          "region": "Siria nord-occidentale"
+        },
+        {
+          "issue": "Accesso limitato",
+          "area": "Aree controllate governo Assad"
+        },
+        {
+          "issue": "Disparità aiuti",
+          "percentage": 10,
+          "unit": "%",
+          "description": "Percentuale di fondi raccolti che raggiunse Siria"
+        },
+        {
+          "issue": "Doppia emergenza",
+          "priorDisplaced": 4000000,
+          "beforeEarthquake": true
+        }
+      ]
+    },
+    "geopolitics": "La disparità di accesso agli aiuti tra Turchia e Siria rappresenta un caso-studio sulla geopolitica degli aiuti umanitari in zone di conflitto"
+  },
+  "conclusions": [
+    {
+      "title": "Tecnologia come cittadinanza attiva",
+      "icon": "🛰️",
+      "content": "I satelliti Copernicus dimostrano che la tecnologia spaziale è ormai uno strumento di gestione delle emergenze globali accessibile e condiviso. Monitorare e documentare i disastri è una forma di partecipazione civica internazionale."
+    },
+    {
+      "title": "Prevenzione e norme antisismiche",
+      "icon": "🏗️",
+      "content": "Il 50% degli edifici crollati non rispettava i codici edilizi turchi del 1999. La prevenzione strutturale — più che la risposta emergenziale — salva vite umane: un insegnamento valido anche per l'Italia."
+    },
+    {
+      "title": "Cooperazione internazionale",
+      "icon": "🤝",
+      "content": "91 nazioni risposero all'appello della Turchia. La solidarietà globale funziona, ma richiede istituzioni forti (ONU, UE, Protezione Civile) e meccanismi pre-esistenti di coordinamento."
+    },
+    {
+      "title": "Giustizia umanitaria",
+      "icon": "⚖️",
+      "content": "La Siria ha ricevuto aiuti sproporzionatamente inferiori rispetto alla Turchia. Conflitti e sanzioni non dovrebbero mai ostacolare il diritto internazionale umanitario nei disastri naturali."
+    }
+  ],
+  "sources": [
+    {
+      "number": "01",
+      "organization": "INGV",
+      "fullName": "Istituto Nazionale di Geofisica e Vulcanologia",
+      "resource": "Bollettino sismi 2023"
+    },
+    {
+      "number": "02",
+      "organization": "OCHA",
+      "fullName": "UN Office for the Coordination of Humanitarian Affairs",
+      "resource": "Flash Appeal Feb. 2023"
+    },
+    {
+      "number": "03",
+      "organization": "Copernicus EMS",
+      "fullName": "Copernicus Emergency Management Service",
+      "resource": "Rapid Mapping Activation EMSR586"
+    },
+    {
+      "number": "04",
+      "organization": "ESA / Sentinel Hub",
+      "fullName": "European Space Agency / EO Browser",
+      "resource": "Immagini Sentinel-1 e Sentinel-2"
+    },
+    {
+      "number": "05",
+      "organization": "AFAD",
+      "fullName": "Turkey Disaster & Emergency Management",
+      "resource": "Rapporti ufficiali"
+    },
+    {
+      "number": "06",
+      "organization": "Amnesty International",
+      "fullName": "Amnesty International",
+      "resource": "Earthquake in Turkey and Syria: Humanitarian Response, 2023"
+    },
+    {
+      "number": "07",
+      "organization": "WHO",
+      "fullName": "World Health Organization",
+      "resource": "Health Cluster Report: Turkey-Syria Earthquake Response, marzo 2023"
+    },
+    {
+      "number": "08",
+      "organization": "USGS",
+      "fullName": "United States Geological Survey",
+      "resource": "Earthquake Hazard Program"
+    }
+  ],
+  "sections": [
+    {
+      "number": "01",
+      "id": "contesto",
+      "title": "Il Contesto: Dove e Quando",
+      "description": "Localizzazione geografica, faglie tettoniche, sequenza sismica"
+    },
+    {
+      "number": "02",
+      "id": "tecnologia",
+      "title": "Tecnologia Satellitare",
+      "description": "Copernicus, Sentinel-1 e Sentinel-2 per il monitoraggio"
+    },
+    {
+      "number": "03",
+      "id": "danni",
+      "title": "I Danni: Analisi dei Dati",
+      "description": "Vittime, edifici distrutti, aree colpite e dati INGV"
+    },
+    {
+      "number": "04",
+      "id": "risposta",
+      "title": "Risposta Umanitaria",
+      "description": "ONU-OCHA, protezione civile e disparità geopolitica"
+    },
+    {
+      "number": "05",
+      "id": "conclusioni",
+      "title": "Riflessioni Conclusive",
+      "description": "Prevenzione, cooperazione internazionale e resilienza"
+    }
+  ]
+}
