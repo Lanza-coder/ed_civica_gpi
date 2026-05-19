@@ -930,3 +930,155 @@ body {
         font-size: 0.95rem;
     }
 }
+
+/* ====================================
+   SEZIONE SATELLITARE TIMELAPSE
+   ==================================== */
+
+.section-satellite {
+    background: linear-gradient(135deg, #0f2236 0%, #1a3a52 40%, #0d1f2d 100%);
+    color: #ecf0f1;
+}
+
+.section-satellite .section-header .section-number {
+    color: rgba(52, 152, 219, 0.4);
+}
+
+.section-satellite h2 {
+    color: #ffffff;
+}
+
+.section-satellite .section-intro {
+    color: rgba(236, 240, 241, 0.85);
+    max-width: 850px;
+    margin: 0 auto var(--spacing-xxl);
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.satellite-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xxl);
+    align-items: start;
+}
+
+/* --- Box immagine --- */
+.satellite-image-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.satellite-gif {
+    width: 100%;
+    max-width: 520px;
+    border-radius: var(--radius-lg);
+    border: 2px solid rgba(52, 152, 219, 0.4);
+    box-shadow: 0 0 40px rgba(52, 152, 219, 0.25), var(--shadow-lg);
+    display: block;
+}
+
+.satellite-caption {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    justify-content: center;
+}
+
+.caption-tag {
+    background: rgba(52, 152, 219, 0.15);
+    border: 1px solid rgba(52, 152, 219, 0.35);
+    color: #5dade2;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.3rem 0.75rem;
+    border-radius: 2rem;
+    letter-spacing: 0.03em;
+}
+
+/* --- Pannello info laterale --- */
+.satellite-info-panel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.sat-info-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 4px solid var(--secondary);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    transition: var(--transition);
+}
+
+.sat-info-card:hover {
+    background: rgba(52, 152, 219, 0.1);
+    border-left-color: var(--secondary-light);
+    transform: translateX(4px);
+}
+
+.sat-info-card.highlight-card {
+    border-left-color: var(--accent);
+    background: rgba(231, 76, 60, 0.08);
+}
+
+.sat-info-card.highlight-card:hover {
+    background: rgba(231, 76, 60, 0.14);
+    border-left-color: var(--accent-light);
+}
+
+.sat-info-card h4 {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+}
+
+.sat-info-card p {
+    color: rgba(236, 240, 241, 0.8);
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+.sat-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.sat-list li {
+    color: rgba(236, 240, 241, 0.8);
+    font-size: 0.9rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.sat-list li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-light);
+    font-weight: 700;
+}
+
+.sat-list li strong {
+    color: #ffffff;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .satellite-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .satellite-gif {
+        max-width: 100%;
+    }
+}
